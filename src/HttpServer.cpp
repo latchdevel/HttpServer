@@ -15,7 +15,7 @@
 
 #include "HttpServer.h"
 
-__attribute__((weak)) void httpServerEvent(const HttpRequest &req, HttpResponse &res);
+__attribute__((weak)) void httpServerEvent(HttpRequest &req, HttpResponse &res);
 
 #if defined(ESCAPE_FORM_STRING_VALUES)
 const struct formStringEscape {

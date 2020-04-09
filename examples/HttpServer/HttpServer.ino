@@ -24,7 +24,10 @@ void loop() {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void httpServerEvent(const HttpRequest &req, HttpResponse &res) {
+void httpServerEvent(HttpRequest &req, HttpResponse &res) {
+
+  req.route.toLowerCase(); // add 40 bytes to flash code
+
   Serial.print("client: ");
   Serial.println(req.remoteIP);
   Serial.print("method: ");
